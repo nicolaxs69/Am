@@ -15,13 +15,13 @@ if ($conn->connect_error) {
 } 
 
 //$nombre = $_GET['nombre'];
+//$fecha = $_GET['fecha'];
 $value1 = $_GET['value1'];
-$value2 = $_GET['value2'];
-$category  = date("Y-m-d");
+$fecha = date("Y-m-d");
 
 //Inserta en la base de datos
-$sql = "INSERT INTO my_chart_data (category, value1, value2)
-VALUES ('$category',".$value1.",".$value2.")"; // Al final de cada sentencia debe ir'".$variable."'
+$sql = "INSERT INTO test (fecha,time, value1)
+VALUES ('$fecha',NOW(),".$value1.")"; // Al final de cada sentencia debe ir '".$variable."'
 
 
 if ($conn->query($sql) === TRUE) {
