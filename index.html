@@ -28,52 +28,34 @@
     },
      "synchronizeGrid":true,
 
-    "valueAxes": [{
-        "id":"v1",
-        "axisColor": "#FF6600",
-        "axisThickness": 2,
-        "axisAlpha": 1,
-        "position": "left"
-    }, {
-        "id":"v2",
-        "axisColor": "#FCD202",
-        "axisThickness": 2,
-        "axisAlpha": 1,
-        "position": "right"
-    }],
-
     "graphs": [ {
-       "valueAxis": "v1",
-       "lineColor": "#FF6600",
+      "balloonText": "[[category]]<br><b>value: [[value]]</b>",
       "valueField": "value1",
       "bullet": "round",
+      "bulletBorderAlpha": 5,
       "bulletBorderColor": "#FFFFFF",
       "bulletBorderThickness": 2,
       "lineThickness ": 2,
       "lineAlpha": 0.5,
-        "fillAlphas": 0
+      "lineColor": "#fdd400",
+      "negativeLineColor": "#67b7dc"
+       
     }, {
-      "valueAxis": "v2",
-      "lineColor": "#FCD202",
       "valueField": "value2",
       "bullet": "round",
+      "bulletBorderAlpha": 5,
       "bulletBorderColor": "#FFFFFF",
       "bulletBorderThickness": 2,
       "lineThickness ": 2,
-      "lineAlpha": 0.5.
-      "fillAlphas": 0
+      "lineAlpha": 0.5,
+      "lineColor": "#fdd400",
+       "negativeLineColor": "#67b7dc",
+      
     } ],
 
-    "chartScrollbar": {
-        "scrollbarHeight": 5,
-        "backgroundAlpha": 0.1,
-        "backgroundColor": "#868686",
-        "selectedBackgroundColor": "#67b7dc",
-        "selectedBackgroundAlpha": 1
-    },
+    "chartScrollbar": {},
     "chartCursor": {
-        "valueLineEnabled": true,
-        "valueLineBalloonEnabled": true
+        "cursorPosition": "mouse"
     }
   } );
   </script>
