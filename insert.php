@@ -20,8 +20,8 @@ $value2 = $_GET['value2'];
 $category  = date("Y-m-d");
 
 //Inserta en la base de datos
-$sql = "INSERT INTO my_chart_data (category, value1, value2)
-VALUES ('$category',".$value1.",".$value2.")"; // Al final de cada sentencia debe ir'".$variable."'
+$sql = "INSERT INTO my_chart_data (category, time, value1, value2)
+VALUES ('$category',NOW(),".$value1.",".$value2.")"; // Al final de cada sentencia debe ir'".$variable."'
 
 
 if ($conn->query($sql) === TRUE) {

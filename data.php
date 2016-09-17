@@ -9,7 +9,7 @@ if ( $link->connect_errno ) {
 $query = "
   SELECT *
   FROM my_chart_data
-  ORDER BY category ASC";
+  ORDER BY time ASC";
 $result = $link->query( $query );
 
 // All good?
