@@ -25,12 +25,20 @@ body { background-color: #3f3e3b; color: #fff; }
 var chart = AmCharts.makeChart("chartdiv", {
     "theme": "chalk",
     "type": "serial",
+<<<<<<< HEAD
      "dataLoader": {
       "url": "data.php"
     },
 
     "valueAxes": [{
         "title": "Consumo Mi empresa Controlada"
+=======
+    "dataLoader":{
+	"url":"data.php"
+},
+    "valueAxes": [{
+        "title": "Consumo mi empresa controlada"
+>>>>>>> 9e5366c1a3513b24a36bad7dafe50fe25cb7ebfd
     }],
     "graphs": [{
         "balloonText": "Income in [[category]]:[[value]]",
@@ -43,7 +51,11 @@ var chart = AmCharts.makeChart("chartdiv", {
     "depth3D": 20,
     "angle": 30,
     "rotate": true,
+<<<<<<< HEAD
     "categoryField": "time",
+=======
+    "categoryField": "fecha",
+>>>>>>> 9e5366c1a3513b24a36bad7dafe50fe25cb7ebfd
     "categoryAxis": {
         "gridPosition": "start",
         "fillAlpha": 0.05,
