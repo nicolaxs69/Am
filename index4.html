@@ -3,68 +3,62 @@
 <head>
 
 <style>
-body { background-color: #3f3e3b; color: #fff; }
 #chartdiv {
-  width: 100%;
-  height: 500px;
-}                   
+	width		: 100%;
+	height		: 500px;
+	font-size	: 11px;
+}							
 </style>
 
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <title>amCharts tutorial: Loading external data</title>
+
 <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
-<script src="https://www.amcharts.com/lib/3/serial.js"></script>
+<script src="https://www.amcharts.com/lib/3/pie.js"></script>
+<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
 <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
 <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
-<script src="https://www.amcharts.com/lib/3/themes/chalk.js"></script>
 
-</head>
 <body>
   <div id="chartdiv" style="width: 100%; height: 500px;"></div>
   <script>
-var chart = AmCharts.makeChart("chartdiv", {
-    "theme": "chalk",
-    "type": "serial",
-<<<<<<< HEAD
-     "dataLoader": {
-      "url": "data.php"
-    },
-
-    "valueAxes": [{
-        "title": "Consumo Mi empresa Controlada"
-=======
-    "dataLoader":{
-	"url":"data.php"
-},
-    "valueAxes": [{
-        "title": "Consumo mi empresa controlada"
->>>>>>> 9e5366c1a3513b24a36bad7dafe50fe25cb7ebfd
+  var chart = AmCharts.makeChart("chartdiv", {
+    "type": "pie",
+    "theme": "light",
+    "innerRadius": "40%",
+    "gradientRatio": [-0.4, -0.4, -0.4, -0.4, -0.4, -0.4, 0, 0.1, 0.2, 0.1, 0, -0.2, -0.5],
+    "dataProvider": [{
+        "country": "Lithuania",
+        "litres": 501.9
+    }, {
+        "country": "Czech Republic",
+        "litres": 301.9
+    }, {
+        "country": "Ireland",
+        "litres": 201.1
+    }, {
+        "country": "Germany",
+        "litres": 165.8
+    }, {
+        "country": "Australia",
+        "litres": 139.9
+    }, {
+        "country": "Austria",
+        "litres": 128.3
     }],
-    "graphs": [{
-        "balloonText": "Income in [[category]]:[[value]]",
-        "fillAlphas": 1,
-        "lineAlpha": 0.2,
-        "title": "Income",
-        "type": "column",
-        "valueField": "value1"
-    }],
-    "depth3D": 20,
-    "angle": 30,
-    "rotate": true,
-<<<<<<< HEAD
-    "categoryField": "time",
-=======
-    "categoryField": "fecha",
->>>>>>> 9e5366c1a3513b24a36bad7dafe50fe25cb7ebfd
-    "categoryAxis": {
-        "gridPosition": "start",
-        "fillAlpha": 0.05,
-        "position": "left"
+    "balloonText": "[[value]]",
+    "valueField": "litres",
+    "titleField": "country",
+    "balloon": {
+        "drop": true,
+        "adjustBorderColor": false,
+        "color": "#FFFFFF",
+        "fontSize": 16
     },
     "export": {
-      "enabled": true
-     }
-});;
+        "enabled": true
+    }
+});
 
   </script>
 </body>
