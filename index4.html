@@ -24,15 +24,15 @@
   <script>
   var chart = AmCharts.makeChart("chartdiv", {
     "type": "pie",
+     "dataLoader": {
+      "url": "data.php"
+    },
     "theme": "light",
     "innerRadius": "40%",
     "gradientRatio": [-0.4, -0.4, -0.4, -0.4, -0.4, -0.4, 0, 0.1, 0.2, 0.1, 0, -0.2, -0.5],
-    "dataLoader": {
-      "url": "data.php"
-    },
     "balloonText": "[[value]]",
     "valueField": "value1",
-    "titleField": "fecha",
+    "titleField": "time",
     "balloon": {
         "drop": true,
         "adjustBorderColor": false,
